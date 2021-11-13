@@ -1,29 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <v-app-bar-title>Microsoft OTS Exam</v-app-bar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-container>
+        <FrequencyDeletion/>
+        <PalindromeSwaps/>
+        <EqualPiles/>
+        <PositiveNegative/>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Vue from 'vue';
+import FrequencyDeletion from '@/components/FrequencyDeletion.vue';
+import PalindromeSwaps from '@/components/PalindromeSwaps.vue';
+import EqualPiles from '@/components/EqualPiles.vue';
+import PositiveNegative from '@/components/PositiveNegative.vue';
 
-@Component({
+export default Vue.extend({
+  name: 'App',
+
   components: {
-    HelloWorld,
+    FrequencyDeletion,
+    PalindromeSwaps,
+    EqualPiles,
+    PositiveNegative,
   },
-})
-export default class App extends Vue {}
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  data: () => ({
+    //
+  }),
+});
+</script>

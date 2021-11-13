@@ -18,6 +18,7 @@
           hint="For Pile Heights. Input number, then press enter"
           label="Pile Heights"
           class="shrink"
+          type="number"
           append-icon=""
           chips
           clearable

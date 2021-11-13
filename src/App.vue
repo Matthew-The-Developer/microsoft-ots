@@ -14,6 +14,7 @@
         <PalindromeSwaps/>
         <EqualPiles/>
         <PositiveNegative/>
+        <MaxUnique/>
       </v-container>
     </v-main>
   </v-app>
@@ -25,6 +26,7 @@ import FrequencyDeletion from '@/components/FrequencyDeletion.vue';
 import PalindromeSwaps from '@/components/PalindromeSwaps.vue';
 import EqualPiles from '@/components/EqualPiles.vue';
 import PositiveNegative from '@/components/PositiveNegative.vue';
+import MaxUnique from '@/components/MaxUnique.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -34,6 +36,7 @@ export default Vue.extend({
     PalindromeSwaps,
     EqualPiles,
     PositiveNegative,
+    MaxUnique,
   },
 
   data: () => ({

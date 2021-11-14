@@ -7,7 +7,7 @@
 
     <v-card-text>
       <div class="text--primary mb-6">
-        Given an array of strings arr. A string s is formed by the concatenation of a subsequence of arr that has unique characters. 
+        Given an array of strings <code>arr</code>. A string s is formed by the concatenation of a subsequence of arr that has unique characters. 
         Return the maximum possible length of s.
         A subsequence is an array that can be derived from another array by deleting some or no elements without changing the order of the remaining elements.
       </div>
@@ -57,9 +57,28 @@ export default Vue.extend({
 
   methods: {
     maximumLength(input: string[]): number {
+      if (input.length < 1) {
+        return 0;
+      }
+      
+      const premutations = input.reduce((subsets: any, value: any) => 
+      subsets.concat(subsets.map((set: any) => {
+        const group = [...value,...set];
+        if(group.filter((item, index) => group.indexOf(item) != index).length) return '';
+        return [value,...set].join('')
+      })), [[]]);
+      
+      return this.maximum(premutations)
+    },
 
-      return 0;
-    }
+    maximum(premutations: string[]) {
+      return Math.max(...premutations.map((mutant: string) => mutant.length));
+    },
+
+    remove(item: string) {
+      this.input.splice(this.input.indexOf(item), 1)
+      this.input = [...this.input];
+    },
   }
 })
 </script>

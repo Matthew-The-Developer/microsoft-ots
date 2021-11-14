@@ -15,6 +15,7 @@
         <EqualPiles/>
         <PositiveNegative/>
         <MaxUnique/>
+        <SumToZero/>
       </v-container>
     </v-main>
   </v-app>
@@ -27,6 +28,7 @@ import PalindromeSwaps from '@/components/PalindromeSwaps.vue';
 import EqualPiles from '@/components/EqualPiles.vue';
 import PositiveNegative from '@/components/PositiveNegative.vue';
 import MaxUnique from '@/components/MaxUnique.vue';
+import SumToZero from '@/components/SumToZero.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -37,10 +39,7 @@ export default Vue.extend({
     EqualPiles,
     PositiveNegative,
     MaxUnique,
+    SumToZero,
   },
-
-  data: () => ({
-    //
-  }),
 });
 </script>

@@ -6,6 +6,15 @@
       dark
     >
       <v-app-bar-title>Microsoft OTS Exam</v-app-bar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        icon
+        href="https://github.com/Matthew-The-Developer"
+      >
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -16,6 +25,7 @@
         <PositiveNegative/>
         <MaxUnique/>
         <SumToZero/>
+        <PartitionEqualArrays/>
       </v-container>
     </v-main>
   </v-app>
@@ -29,6 +39,7 @@ import EqualPiles from '@/components/EqualPiles.vue';
 import PositiveNegative from '@/components/PositiveNegative.vue';
 import MaxUnique from '@/components/MaxUnique.vue';
 import SumToZero from '@/components/SumToZero.vue';
+import PartitionEqualArrays from '@/components/PartitionEqaulArrays.vue';
 
 export default Vue.extend({
   name: 'App',
@@ -40,6 +51,7 @@ export default Vue.extend({
     PositiveNegative,
     MaxUnique,
     SumToZero,
+    PartitionEqualArrays,
   },
 });
 </script>

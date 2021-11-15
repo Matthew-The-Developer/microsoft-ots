@@ -34,7 +34,7 @@ export default Vue.extend({
   name: 'SumToZero',
 
   data: () => ({
-    input: 0,
+    input: null,
   }),
 
   methods: {
